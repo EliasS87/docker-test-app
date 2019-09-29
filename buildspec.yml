@@ -1,10 +1,9 @@
 version: 0.2
+env:
+  parameter-store:
+    DOCKER-TEST-ECR: "docker-test-ecr"
 
 phases:
-  env:
-    parameter-store:
-      DOCKER-TEST-ECR: "docker-test-ecr"
-
   pre_build:
     commands:
       - aws --version
